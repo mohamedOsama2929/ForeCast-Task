@@ -1,0 +1,6 @@
+rootProject.name = "Mvvm Structure"
+include ':app'
+include ':domain'
+include ':data'
+include ':core'
+include ':entities'
