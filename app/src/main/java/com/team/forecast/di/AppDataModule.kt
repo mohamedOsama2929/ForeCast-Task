@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.di
+package com.team.forecast.di
 
 import com.team.data.local.MainDao
 import com.team.data.local.MainDatabase

@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.base
+package com.team.forecast.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

@@ -30,7 +30,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/javac-shaded/9-dev-r4023-3/72b688efd290280a0afde5f9892b0fde6f362d1d/javac-shaded-9-dev-r4023-3.jar" />
         </processorPath>
-        <module name="Mvvm_Structure.domain" />
+        <module name="Forecast_Task.domain" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -71,10 +71,14 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.17/f97ce6decaea32b36101e37979f8b647f00681fb/animal-sniffer-annotations-1.17.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/javac-shaded/9-dev-r4023-3/72b688efd290280a0afde5f9892b0fde6f362d1d/javac-shaded-9-dev-r4023-3.jar" />
         </processorPath>
-        <module name="Mvvm_Structure.entities" />
+        <module name="Forecast_Task.entities" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
+      <module name="Forecast_Task.app" target="11" />
+      <module name="Forecast_Task.core" target="11" />
+      <module name="Forecast_Task.data" target="11" />
+      <module name="Forecast_Task.entities" target="1.8" />
       <module name="Mvvm_Structure.app" target="11" />
       <module name="Mvvm_Structure.core" target="11" />
       <module name="Mvvm_Structure.coredata" target="11" />

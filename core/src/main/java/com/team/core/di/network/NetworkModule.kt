@@ -30,7 +30,7 @@ object NetworkModule {
     fun retrofit(
         okHttpClient: OkHttpClient, gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
-        return Retrofit.Builder().client(okHttpClient).baseUrl("http://data.fixer.io/api/")
+        return Retrofit.Builder().client(okHttpClient).baseUrl("http://api.openweathermap.org/data/2.5/")
             .addConverterFactory(gsonConverterFactory)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()

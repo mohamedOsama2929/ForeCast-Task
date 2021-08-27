@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.app
+package com.team.forecast.app
 
 import android.app.Application
 import android.content.Context

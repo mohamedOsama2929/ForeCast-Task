@@ -1,4 +1,4 @@
-package com.team.mvvmstructure
+package com.team.forecast
 
 import org.junit.Test
 

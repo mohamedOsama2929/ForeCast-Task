@@ -1,25 +1,19 @@
 package com.team.data.local
 
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.team.entities.weather.local.WeatherLocal
+
+import io.reactivex.Single
 
 @Dao
 interface MainDao {
 
-    /* @Query("SELECT * FROM currencies")
-     fun getAll(): List<CurrenciesLocal>*/
-/*
-    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
-    fun loadAllByIds(userIds: IntArray): List<User>
+     @Query("SELECT * FROM weather WHERE name LIKE :cityName")
+     fun getCachedWeather(cityName:String): Single<WeatherLocal>
 
-*/
-
-/*
-    @Insert
-    fun insertAll(vararg users: CurrenciesLocal)
-*/
-
-    /*   @Delete
-       fun delete(user: User)
-
-   */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(vararg weatherLocal: WeatherLocal)
 }

@@ -1,4 +1,4 @@
-package com.team.mvvmstructure
+package com.team.forecast
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
