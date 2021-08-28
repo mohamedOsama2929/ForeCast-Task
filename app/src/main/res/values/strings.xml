@@ -2,4 +2,12 @@
     <string name="app_name">Mvvm Structure</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="sorry_error">Sorry Error</string>
+    <string name="retry">Retry</string>
+    <string name="city_name">City Name</string>
+    <string name="enter_city_name_toast">Enter City Name</string>
+    <string name="visibility">Visibility</string>
+    <string name="temp">Temp</string>
+    <string name="humidity">Humidity</string>
 </resources>

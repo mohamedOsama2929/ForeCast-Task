@@ -61,7 +61,6 @@ class WeatherViewModel @Inject constructor(
                     weatherLiveData.postValue(weatherLocalMapper.mapFromEntity(weather))
                 },
                     {
-                        // TODO: 8/27/2021 show sorry error
                         networkState.postValue(NetworkState.ERROR)
                         errorState.postValue(netWorkError(it))
                     }
