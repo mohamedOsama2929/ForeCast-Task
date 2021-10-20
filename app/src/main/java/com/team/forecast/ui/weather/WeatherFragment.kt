@@ -82,6 +82,9 @@ class WeatherFragment : Fragment() {
         weatherViewModel.getWeatherData().observe(viewLifecycleOwner, { weather ->
             // TODO: 8/28/2021 send data to rv
             showWeathersLayout()
+            binding.shimmerFrameLayout.stopShimmer()
+            binding.shimmerFrameLayout.visibility=View.GONE
+            binding.rvWeathers.visibility=View.VISIBLE
             weatherRecycleViewAdapter.setData(weather.list as MutableList<ListItem>)
 
         })
@@ -90,21 +93,30 @@ class WeatherFragment : Fragment() {
     private fun detectNetworkState() {
         weatherViewModel.getNetworkState().observe(viewLifecycleOwner, Observer {
             if (it == NetworkState.LOADING) {
-                binding.pbWeather.visibility = View.VISIBLE
+                //binding.pbWeather.visibility = View.VISIBLE
+
+                binding.shimmerFrameLayout.visibility=View.VISIBLE
+
 
                 if (it == NetworkState.ERROR) {
-                    binding.pbWeather.visibility = View.GONE
+                   // binding.pbWeather.visibility = View.GONE
+                    binding.shimmerFrameLayout.visibility=View.GONE
+
                     showErrorLayout()
 
                 }
             } else {
-                binding.pbWeather.visibility = View.GONE
+               // binding.pbWeather.visibility = View.GONE
+                binding.shimmerFrameLayout.visibility=View.GONE
+
 
             }
         })
 
         weatherViewModel.getError().observe(viewLifecycleOwner, Observer {
-            binding.pbWeather.visibility = View.GONE
+           // binding.pbWeather.visibility = View.GONE
+            binding.shimmerFrameLayout.visibility=View.GONE
+
             showErrorLayout()
         })
     }
@@ -125,7 +137,7 @@ class WeatherFragment : Fragment() {
     private fun showEnterDataLayout() {
         binding.layoutError.visibility = View.GONE
         binding.layoutEnterData.visibility = View.VISIBLE
-        binding.layoutShowData.visibility = View.GONE
+        binding.layoutShowData.visibility = View.VISIBLE
     }
 
     private fun hideKeyboard(activity: Activity) {

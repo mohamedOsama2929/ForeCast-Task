@@ -1,22 +1,15 @@
 package com.team.domain.use_case.weather.remote
 
 import com.team.data.remote.IRemoteData
-import com.team.data.repo.Repo
 import com.team.entities.weather.remote.request.WeatherRequest
 import com.team.entities.weather.remote.response.WeatherResponse
-import dagger.hilt.android.testing.HiltAndroidRule
-import dagger.hilt.android.testing.HiltAndroidTest
 import io.reactivex.Single
 import org.junit.Assert.*
 import org.junit.Before
-import org.junit.Rule
-
 import org.junit.Test
-import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
-import javax.inject.Inject
 
 class WeatherUseCaseTest {
 
