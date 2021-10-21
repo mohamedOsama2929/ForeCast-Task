@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class Repo @Inject constructor(
     private val iRemoteDataSource: IRemoteDataSource,
-    private val iLocalDataSource: ILocalDataSource
+    private val iLocalDataSource: ILocalDataSource,
 ) : IDomainRepo {
     /*----------------------------------------Remote----------------------------------------*/
 

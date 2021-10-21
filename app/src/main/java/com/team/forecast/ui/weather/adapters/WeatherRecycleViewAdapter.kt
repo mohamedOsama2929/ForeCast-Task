@@ -3,24 +3,37 @@ package com.team.forecast.ui.weather.adapters
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.team.entities.weather.remote.response.ListItem
 import com.team.forecast.databinding.ItemWeatherBinding
 import javax.inject.Inject
 
 
+
 class WeatherRecycleViewAdapter @Inject constructor(
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private lateinit var items: MutableList<ListItem>
+    private  var items: MutableList<ListItem> = mutableListOf()
     private lateinit var binding: ItemWeatherBinding
 
 
+    object characterComparator : DiffUtil.ItemCallback<ListItem>() {
+        override fun areItemsTheSame(oldItem: ListItem, newItem: ListItem) =
+            oldItem.dtTxt== newItem.dtTxt
+
+        override fun areContentsTheSame(oldItem: ListItem, newItem: ListItem) =
+            oldItem == newItem
+    }
 
     @SuppressLint("NotifyDataSetChanged")
-     fun setData(items: MutableList<ListItem>) {
-        this.items = items
-        notifyDataSetChanged()
+     fun setData(newItems: MutableList<ListItem>) {
+        val diffResult = DiffUtil.calculateDiff(WeahersCallBack(this.items,newItems))
+        items.clear()
+        items.addAll(newItems)
+        diffResult.dispatchUpdatesTo(this)
+      /*  this.items = items
+        notifyDataSetChanged()*/
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

@@ -2,6 +2,7 @@ package com.team.entities.weather.remote.mappers
 
 import com.team.entities.utils.EntityMapper
 import com.team.entities.weather.models.Weather
+import com.team.entities.weather.remote.response.ListItem
 import com.team.entities.weather.remote.response.WeatherResponse
 import javax.inject.Inject
 
@@ -25,7 +26,7 @@ constructor() : EntityMapper<WeatherResponse, Weather> {
             city = domainModel.city,
             cod = domainModel.cod,
             message = domainModel.message,
-            list = domainModel.list,
+            list = domainModel.list ,
         )
     }
 

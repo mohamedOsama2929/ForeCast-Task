@@ -70,5 +70,9 @@ dependencies {
     // optional - RxJava2 support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
 
+    //jetpack Paging
+    def paging_version = "3.0.1"
+
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
 }
